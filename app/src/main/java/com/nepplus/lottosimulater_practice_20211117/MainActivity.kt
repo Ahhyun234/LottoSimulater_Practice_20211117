@@ -2,7 +2,10 @@ package com.nepplus.lottosimulater_practice_20211117
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.NumberFormat
 
@@ -14,6 +17,20 @@ class MainActivity : AppCompatActivity() {
     val mWinLottoNumArr = arrayListOf(17, 18, 21, 27, 29, 33, 26)
     val mRankCountList = arrayListOf(0, 0, 0, 0, 0, 0)
     lateinit var mLottoNumTxtList: ArrayList<TextView>
+    var isAutoOn = false
+    lateinit var mHandler: Handler
+
+    val buyLottoRunnable = object : Runnable {
+        override fun run() {
+            if (mSpendMoney <= 100000) {
+                makeLottoNumbers()
+                checkLottoRank()
+                mHandler.post(this)
+            } else {
+                Toast.makeText(this@MainActivity, "자동 구매를 종료합니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +42,30 @@ class MainActivity : AppCompatActivity() {
 
     fun setupEvent() {
 
-        btnBuyLotto.setOnClickListener {
-
+        btnAutoBuy.setOnClickListener {
+            if (!isAutoOn) {
+                mHandler.post(buyLottoRunnable)
+                isAutoOn = true
+                btnAutoBuy.text = "자동구매 종료하기"
+            } else {
+                mHandler.removeCallbacks(buyLottoRunnable)
+                isAutoOn = false
+                btnAutoBuy.text = "자동 구매 재개"
+            }
+            while (true) {
                 makeLottoNumbers()
                 checkLottoRank()
+                if (mSpendMoney >= 1000000) {
+                    break
+                }
+
+            }
+        }
+
+        btnBuyLotto.setOnClickListener {
+
+            makeLottoNumbers()
+            checkLottoRank()
 
         }
 
@@ -97,8 +134,15 @@ class MainActivity : AppCompatActivity() {
 
     fun setValues() {
 
+        mHandler = Handler(Looper.getMainLooper())
+
         mLottoNumTxtList = arrayListOf(
-            txtBuyLottoNum1, txtBuyLottoNum2, txtBuyLottoNum3, txtBuyLottoNum4, txtBuyLottoNum5, txtBuyLottoNum6
+            txtBuyLottoNum1,
+            txtBuyLottoNum2,
+            txtBuyLottoNum3,
+            txtBuyLottoNum4,
+            txtBuyLottoNum5,
+            txtBuyLottoNum6
         )
 
     }
