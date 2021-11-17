@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이번주 로또 당첨 번호"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="17"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="21"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="27"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="29"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="33"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="26"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="구매 번호"
+        android:textColor="@color/black"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/txtWinLottoNum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/txtWinLottoNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/txtWinLottoNum3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/txtWinLottoNum4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/txtWinLottoNum5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/txtWinLottoNum6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:layout_marginStart="20dp"/>
+
+
+
+
+</LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnBuyLotto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로또 구매하기"/>
+
+    <Button
+        android:id="@+id/btnAutoBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="자동 구매"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용 금액: "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtHowMuchLotto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0원"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="벌은 금액: "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtEarnMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0원"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1등 횟수: "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtWinCount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2등 횟수: "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtWinCount2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3등 횟수: "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtWinCount3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4등 횟수: "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtWinCount4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5등 횟수: "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtWinCount5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="낙첨 횟수: "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtWinCount6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
