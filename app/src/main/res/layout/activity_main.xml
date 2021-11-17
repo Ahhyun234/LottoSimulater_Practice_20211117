@@ -92,42 +92,42 @@
     android:gravity="center">
 
     <TextView
-        android:id="@+id/txtWinLottoNum1"
+        android:id="@+id/txtBuyLottoNum1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="\?"
         android:layout_marginStart="20dp"/>
 
     <TextView
-        android:id="@+id/txtWinLottoNum2"
+        android:id="@+id/txtBuyLottoNum2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="\?"
         android:layout_marginStart="20dp"/>
 
     <TextView
-        android:id="@+id/txtWinLottoNum3"
+        android:id="@+id/txtBuyLottoNum3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="\?"
         android:layout_marginStart="20dp"/>
 
     <TextView
-        android:id="@+id/txtWinLottoNum4"
+        android:id="@+id/txtBuyLottoNum4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="\?"
         android:layout_marginStart="20dp"/>
 
     <TextView
-        android:id="@+id/txtWinLottoNum5"
+        android:id="@+id/txtBuyLottoNum5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="\?"
         android:layout_marginStart="20dp"/>
 
     <TextView
-        android:id="@+id/txtWinLottoNum6"
+        android:id="@+id/txtBuyLottoNum6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="\?"
@@ -165,7 +165,7 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/txtHowMuchLotto"
+            android:id="@+id/txtHowMuchSpendMoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0원"/>
@@ -187,7 +187,7 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/txtEarnMoney"
+            android:id="@+id/txtHoWMuchEarnMoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0원"/>
